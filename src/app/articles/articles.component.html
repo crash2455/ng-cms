@@ -1,0 +1,8 @@
+<h1>Posts</h1>
+<ul *ngIf="articles">
+  <li class="list-unstyled" *ngFor="let article of articles">
+    <h2><a [routerLink]="['/articles/view/', article._id]">{{article.title}}</a></h2>
+    <div>{{article.description}}</div>
+    <div><small><em>Created: {{article.created}}</em></small></div>
+  </li>
+</ul>

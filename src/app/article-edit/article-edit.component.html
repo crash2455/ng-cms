@@ -1,0 +1,34 @@
+<h1>Edit Post</h1>
+<div class="card">
+  <div class="card-header clearfix">
+    <form (ngSubmit)="onSubmit()" #createUser="ngForm">
+
+      <div *ngIf="errorMessage">{{errorMessage}}</div>
+      <div class="card-body">
+        <div class="form-group col-md-6">
+          <label for="title">Title</label>
+          <input [(ngModel)]="article.title" type="text" name="title" id="title" class="form-control">
+          <div *ngIf="errors.title">{{errors.title.message}}</div>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="body">Body</label>
+          <textarea [(ngModel)]="article.body" name="body" id="body" class="form-control"rows="6"></textarea>
+          <div *ngIf="errors.body">{{errors.body.message}}</div>
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="description">Summary</label>
+          <input [(ngModel)]="article.description" type="text" name="description" id="description" class="form-control">
+        </div>
+
+        <div class="form-group col-md-6">
+          <label for="keywords">Keywords (separated by commas)</label>
+          <input [(ngModel)]="article.keywords" type="text" name="keywords" id="keywords" class="form-control">
+        </div>
+
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

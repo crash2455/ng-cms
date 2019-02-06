@@ -11,6 +11,11 @@ import { UsersService} from './users.service';
 import { UserViewComponent } from './user-view/user-view.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { ArticleComponent } from './articles/articles.component';
+import { ArticleViewComponent } from './article-view/article-view.component';
+import { ArticleCreateComponent } from './article-create/article-create.component';
+import { ArticleEditComponent } from './article-edit/article-edit.component';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { UserEditComponent } from './user-edit/user-edit.component';
     UsersComponent,
     UserViewComponent,
     UserCreateComponent,
-    UserEditComponent
+    UserEditComponent,
+    ArticleComponent,
+    ArticleViewComponent,
+    ArticleCreateComponent,
+    ArticleEditComponent,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
